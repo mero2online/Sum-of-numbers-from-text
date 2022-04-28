@@ -1,0 +1,201 @@
+body {
+    font-size: 120%;
+    margin: 30px;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: #b5bd68;
+}
+
+#description {
+    border: 2px solid #b294bb;
+}
+
+code {
+    flex-wrap: wrap;
+}
+
+span.cm-string {
+    color: #b5bd68;
+}
+
+span.cm-variable {
+    color: rgb(50, 205, 159)
+}
+
+span.cm-number {
+    color: #de935f
+}
+
+#result {
+    color: red;
+}
+
+.input1 {
+    background-color: rgb(248, 248, 165);
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.input1:hover {
+    color: #255784;
+    background: #2196f3;
+    transition-delay: 0.2s;
+}
+
+.input2 {
+    border: hidden;
+    background-color: rgb(24, 24, 24);
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.input2:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.2s;
+}
+
+.input2:focus {
+    outline: none;
+}
+
+.inSequence {
+    color: green;
+}
+
+/* .inSequence{
+    width: fit-content;
+    height: fit-content;
+    background-color: green;
+    animation-name: example;
+    animation: example 4s infinite;
+  }
+  
+  @keyframes example {
+    from {background-color: green;}
+    to {background-color: gray;}
+  } */
+
+.outSequence {
+    color: rgb(153, 9, 172);
+}
+
+#calculationbutton {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+#calculationbutton:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.3s;
+}
+
+#calculationbutton span {
+    position: absolute;
+    display: block;
+}
+
+#calculationbutton span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+#calculationbutton:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+#calculationbutton span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+#calculationbutton:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#calculationbutton span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+#calculationbutton:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#calculationbutton span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+#calculationbutton:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+
+  .content {
+    display: none;
+    overflow: hidden;
+  }

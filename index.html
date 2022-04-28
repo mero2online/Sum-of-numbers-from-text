@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of numbers from text
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body>
+    <h1>Sum of numbers from text</h1>
+    <button type="button" class="collapsible">Click for more info</button>
+    <div class="content">
+        <div class="markdown" id="description">
+            <p>This is the calculator to extract all the numbers from the text and sum all</p>
+            <p>For example:</p>
+            <p>Input: <br>
+                15 first and 15 second</p>
+            <p>Output: <br>
+                30</p>
+        </div>
+    </div>
+    <div>
+        <br>
+        Input field : <br>
+        <textarea id="sequence" class="input1" cols="20" rows="10">15 to first one and 15 for second person</textarea>
+        <br>
+
+        <div id="calculationbutton">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="button" onClick="calculation()" id="myBtn" class="input2" Value="Calculate" />
+        </div>
+    </div>
+    <p class="inSequence">Input Sequence : <br>
+        <span id="inputSequence"></span>
+        <br>
+        <p class="outSequence">The Result is : <br>
+            <span id="result"></span>
+        </p>
+</body>
+<script>
+    var inValue = document.getElementById("sequence");
+    inValue.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+        }
+    });
+
+    function XO(str) {
+
+        var numberPattern = /[-]{0,1}[\d]*[.]{0,1}[\d]+/g;
+        var sum = str.match(numberPattern).reduce(function (accumulator, currentValue) {
+            return Number(accumulator) + Number(currentValue)
+        })
+        return sum
+    }
+
+    function OXO(str) {
+
+        var numberPattern = /[-]{0,1}[\d]*[.]{0,1}[\d]+/g;
+        var numberPatternArray = str.match(numberPattern)
+        var numberPatternWithPlus = numberPatternArray.join(' + ')
+
+        return numberPatternWithPlus
+    }
+
+    function calculation() {
+        str = document.getElementById("sequence").value;
+
+        document.getElementById("inputSequence").innerHTML = OXO(str);
+        document.getElementById("result").innerHTML = XO(str);
+        document.getElementById("sequence").value = ' ';
+    }
+
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>
