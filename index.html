@@ -25,7 +25,7 @@
     <div>
         <br>
         Input field : <br>
-        <textarea id="sequence" class="input1" cols="20" rows="10">15 to first one and 15 for second person</textarea>
+        <textarea id="sequence" class="input1" cols="20" rows="10"></textarea>
         <br>
 
         <div id="calculationbutton">
@@ -35,6 +35,14 @@
             <span></span>
             <input type="button" onClick="calculation()" id="myBtn" class="input2" Value="Calculate" />
         </div>
+        <div id="calculationbutton">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="button" onClick="reset()" id="myBtn" class="input2" Value="Reset" />
+        </div>
+
     </div>
     <p class="inSequence">Input Sequence : <br>
         <span id="inputSequence"></span>
@@ -75,7 +83,13 @@
 
         document.getElementById("inputSequence").innerHTML = OXO(str);
         document.getElementById("result").innerHTML = XO(str);
-        document.getElementById("sequence").value = ' ';
+        // document.getElementById("sequence").value = ' ';
+    }
+
+    function reset() {
+        document.getElementById("inputSequence").innerHTML = '';
+        document.getElementById("result").innerHTML = '';
+        document.getElementById("sequence").value = '';
     }
 
 
