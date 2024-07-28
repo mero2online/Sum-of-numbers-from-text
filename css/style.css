@@ -10,6 +10,11 @@ h1 {
     color: #b5bd68;
 }
 
+#sequence
+{
+    overflow-y:scroll;
+}
+
 #description {
     border: 2px solid #b294bb;
 }
